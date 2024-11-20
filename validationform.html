@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("fname").value;
+            var lastName = document.getElementById("lname").value;
+            var username = document.getElementById("usrn").value;
+            var password = document.getElementById("pwd").value;
+            var confirmPassword = document.getElementById("cpwd").value;
+            var mobile = document.getElementById("mob").value;
+            var email = document.getElementById("email").value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            
+            if (firstName == "") {
+                alert("First Name must be filled out");
+                return false;
+            }
+            if (lastName == "") {
+                alert("Last Name must be filled out");
+                return false;
+            }
+            if (username == "") {
+                alert("Username must be filled out");
+                return false;
+            }
+            if (password == "") {
+                alert("Password must be filled out");
+                return false;
+            }
+            if (confirmPassword == "") {
+                alert("Please confirm your password");
+                return false;
+            }
+            if (password != confirmPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+            if (gender == null) {
+                alert("Gender must be selected");
+                return false;
+            }
+            if (mobile == "") {
+                alert("Mobile Number must be filled out");
+                return false;
+            }
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+            // Additional validations can be added here
+            return true;
+        }
+    </script>
+</head>
+<body bgcolor="#9cadce">
+<center>
+    <h1>REGISTRATION FORM</h1>
+    <form onsubmit="return validateForm()">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname">
+            <br><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname">
+            <br><br>
+            <label for="usrn">Username:</label>
+            <input type="text" id="usrn" name="usrn">
+            <br><br>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd">
+            <br><br>
+            <label for="cpwd">Confirmation:</label>
+            <input type="password" id="cpwd" name="cpwd">
+            <br><br>
+            Gender: 
+            <input type="radio" id="male" name="gender" value="Male"> Male
+            <input type="radio" id="female" name="gender" value="Female"> Female
+            <br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Details</legend>
+            <label for="mob">Mobile No:</label>
+            <input type="number" id="mob" name="mob">
+            <br><br>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="5" cols="15"></textarea>
+            <br><br>
+            <label for="email">Email id:</label>
+            <input type="email" id="email" name="email">
+        </fieldset>
+        <br>
+        <input type="submit" value="SUBMIT">
+    </form>
+</center>
+</body>
+</html>
