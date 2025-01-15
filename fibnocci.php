@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Fibonacci Series</title>
     <style>
+        body {
+            background-color: maroon;
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+        }
         .output {
-		
-           
-            padding: 30px;
-            font-family: Arial, sans-serif;
-	    color:white;
+            padding: 20px;
         }
     </style>
 </head>
-<body bgcolor="maroon">
+<body>
 
 <div class="output">
     <?php
@@ -26,7 +29,7 @@
             $num2 = $num3;
         }
     }
-    fibonacciSeries(30);
+    fibonacciSeries(20);
     ?>
 </div>
 
